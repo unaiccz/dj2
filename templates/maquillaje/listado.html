@@ -1,0 +1,39 @@
+{% extends 'includes/base.html' %}
+{% load static %}
+
+{% block titulo %}
+    maquillajes 💄
+{% endblock titulo %}
+    
+
+{% block body %}
+{% include 'includes/header.html' %}
+   <div class="container">
+<!-- bucle for cards -->
+<div class="row">
+{% for i in mk %}
+  
+
+        <div class="col">
+
+            <div class="card" style="height: 550px; width: 360px; margin: 50px; margin-bottom: 60px;">
+                <div class="card-img-top"><img src="{{i.img.url}}" alt="" width="360px" height="500px"></div>
+                <p>tipo:{{i.tipo}}</p>
+                <div class="card-body">
+                    <div class="card-title" style="color: black;"><h5>{{i.nombre}} </h5></div><br>
+                    <a href="#" class="btn btn-primary">Detalles</a>
+                    <div class="card-text" style="color: black;"><p>{{i.descripcion}}<br>  
+                        <span>precio:</span>
+                        {{i.price}}</p></div>
+                </div>
+              
+            </div>
+        </div>
+    
+{% endfor %}
+</div>
+
+   </div>
+{% endblock body %}
+    
+    

@@ -26,7 +26,7 @@ SECRET_KEY = "django-insecure-@p5!ymo0-r4cdssbx%nskqn=l#g!0#%q=a*(ua@_1p4lk-cld_
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['192.168.1.106','localhost','192.168.1.107']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -56,7 +56,7 @@ ROOT_URLCONF = "sabela.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [BASE_DIR / 'C:/Users/Usuario/Desktop/cursos/django/sabela/templates'],
+        "DIRS": [BASE_DIR / 'templates'],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [

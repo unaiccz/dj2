@@ -1,0 +1,23 @@
+{% extends 'includes/base.html' %}
+{% block titulo %}
+    detalles
+{% endblock titulo %}
+
+{% block body %}
+{% include 'includes/header.html' %}
+<div class="card" style="height: 700px; width: 375px; margin-left: auto; margin-right: auto;
+margin-bottom: 20px;">
+    <div class="card-img-top"><img src="{{object.img.url}}" alt="" width="360px" height="500px"></div>
+    <div class="card-body">
+        <div class="card-title" style="color: black;"><h5>{{object.nombre}} </h5></div><br>
+        <hr>
+        <span>precio:</span>
+        {{object.price}}</p>
+        <div class="card-text" style="color: black;"><p>descripcion:  {{object.descripcion}}</p><br>  
+    </div>
+        
+    </div>
+  
+</div>
+
+{% endblock body %}

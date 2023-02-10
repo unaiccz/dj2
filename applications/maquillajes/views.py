@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic import ListView
+from django.views.generic import ListView, DetailView
 
 from applications.maquillajes.models import maquillaje
 # Create your views here.
@@ -18,3 +18,6 @@ class search(ListView):
             tipo__icontains = clave
         )
         return lista
+class detail(DetailView):
+    model = maquillaje
+    template_name = 'maquillaje/detail.html'
